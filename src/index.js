@@ -1,4 +1,5 @@
 import "./styles.css";
+
 var sizeOfBoard = 5;
 var header = "Tic Tac Toe " + sizeOfBoard + " x " + sizeOfBoard;
 document.getElementById("board").innerHTML = "<h1>" + header + "</h1>";
@@ -33,6 +34,7 @@ for (var r = 0; r < sizeOfBoard; r++) {
   }
   table += "</tr>";
 }
+
 document.getElementById("board").innerHTML = "<table>" + table + "</table>";
 
 document.getElementById("board").addEventListener("click", placeMark);
@@ -48,9 +50,9 @@ function placeMark(points) {
   }
 }
 
-function setSizeOfBoard() {
+/* function setSizeOfBoard() {
   document.getElementById("boardSizeField").value = sizeOfBoard;
-}
+} */
 
 function switchPlayer() {
   if (turn === 0) {
